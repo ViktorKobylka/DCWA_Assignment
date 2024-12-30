@@ -1,0 +1,19 @@
+<a href="/">Home</a>
+<table>
+    <thead>
+        <tr>
+            <th>Student</th>
+            <th>Module</th>
+            <th>Grade</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% grades.forEach(grade => { %>
+            <tr>
+                <td><%= grade.student_name %></td>
+                <td><%= grade.module_name%></td>
+                <td><%= grade.grade%></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
