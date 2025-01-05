@@ -1,0 +1,19 @@
+<a href="/">Home</a><br>
+<h1>Update Student</h1>
+<% if (errors != undefined) { %>
+    <ul>
+        <% errors.forEach((error) => { %>
+            <li><%= error.msg %></li>
+        <% }) %>
+    </ul>
+<% } %>
+<form method="POST" action="/students/edit/<%= student[0].sid %>">
+    <label>Student ID</label>
+    <input type="text" name="id" value="<%= student[0].sid %>"  readonly><br>
+    <label>Name</label>
+    <input type="text" name="name" value="<%= student[0].name %>"><br>
+    <label>Age</label>
+    <input type="text" name="age" value="<%= student[0].age %>"><br>
+    <input type="submit" value="Add">
+</form>
+    

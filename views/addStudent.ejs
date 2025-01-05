@@ -1,0 +1,18 @@
+<a href="/">Home</a><br>
+<h1>Add Student</h1>
+<% if (errors != undefined) { %>
+    <ul>
+        <% errors.forEach((error) => { %>
+            <li><%= error.msg %></li>
+        <% }) %>
+    </ul>
+<% } %>
+<form method="POST" action="/students/add">
+    <label>Student ID</label>
+    <input type="text" name="id"  value="<%= student.id %>"><br>
+    <label>Name</label>
+    <input type="text" name="name"  value="<%= student.name %>"><br>
+    <label>Age</label>
+    <input type="text" name="age"  value="<%= student.age %>"><br>
+    <input type="submit" value="Add">
+</form>
